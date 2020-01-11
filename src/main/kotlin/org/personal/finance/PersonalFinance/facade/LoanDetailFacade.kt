@@ -1,8 +1,8 @@
-package org.personal.finance.personalFinance.service
+package org.personal.finance.personalFinance.facade
 
 import org.personal.finance.personalFinance.docs.LoanDetail
 import reactor.core.publisher.Mono
 
-interface LoanDetailService {
+interface LoanDetailFacade {
     fun save(loanDetail: LoanDetail): Mono<LoanDetail>
 }

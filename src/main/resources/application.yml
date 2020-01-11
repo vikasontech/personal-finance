@@ -4,6 +4,10 @@ spring:
 #      uri: mongodb://heroku_5207gcmz:cvkjqscebb1n0vrhq3tp9c0t0o@ds135089.mlab.com:35089/heroku_5207gcmz
       uri:
 
+logging:
+  level:
+    org.reflections.Reflections: ERROR
+
 management:
   security:
     enabled: false
