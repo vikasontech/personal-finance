@@ -22,30 +22,8 @@ import reactor.test.StepVerifier
 import java.math.BigDecimal
 import java.time.LocalDate
 
-@RunWith(SpringRunner::class)
-@SpringBootTest
-@ContextConfiguration(initializers = arrayOf(Initializer::class))
-class MongoDbContainerTest {
-
-    @Autowired
-    private lateinit var repo: LoanDetailRepo
-
-    @Test
-    fun sample() {
-        StepVerifier.create(repo.save(LoanDetail(_id = "1", loanAmount = BigDecimal.valueOf(100000L),
-                emiAmount = BigDecimal.valueOf(1000L),
-                interestRate = 10F,
-                loanCommencedDate = LocalDate.now(),
-                numberOfEmi = 120)))
-                .expectSubscription()
-                .expectNextCount(1)
-                .verifyComplete()
-    }
-}
-
-
 @Configuration
-class Initializer : ApplicationContextInitializer<ConfigurableApplicationContext> {
+class MongoContainerInitializer : ApplicationContextInitializer<ConfigurableApplicationContext> {
     val image:String =  "mongo:4.2.0-rc2-bionic"
     override fun initialize(configurableApplicationContext: ConfigurableApplicationContext) {
         val mongoContainer = MongoContainer(image)
