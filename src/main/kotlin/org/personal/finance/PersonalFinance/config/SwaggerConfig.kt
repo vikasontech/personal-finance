@@ -1,6 +1,5 @@
 package org.personal.finance.personalFinance.config
 
-import org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.reactive.config.ResourceHandlerRegistry
@@ -20,12 +19,21 @@ class SwaggerConfig {
     fun api(): Docket =
             Docket(DocumentationType.SWAGGER_2)
                     .select()
-                    .apis(RequestHandlerSelectors.any())
+                    .apis(RequestHandlerSelectors.basePackage("org.personal.finance.personalFinance.web"))
                     .paths(PathSelectors.any())
                     .build()
 
 }
 
+@Configuration
+class WebfluxConfig : WebFluxConfigurer {
+    override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
+        registry.addResourceHandler("/swagger-ui.html**")
+                .addResourceLocations("classpath:/META-INF/resources/")
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/")
+    }
+}
 //
 //@Configuration
 //class WebFLuxConfig : WebFluxConfigurer {
