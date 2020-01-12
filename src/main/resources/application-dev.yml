@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://heroku_dxtk7qhc:q8taj3mo5q2dqgpbfti9ke8tij@ds361968.mlab.com:61968/heroku_dxtk7qhc
+#      uri:
+
+management:
+  security:
+    enabled: false
+
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+    env:
+      enabled: true
