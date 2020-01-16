@@ -25,15 +25,4 @@ class SwaggerConfig {
 
 }
 
-@Configuration
-class WebFLuxConfig : WebFluxConfigurer {
-    override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
-        registry.addResourceHandler("**swagger**")
-                .addResourceLocations("classpath::/META-INF/resources/")
-        registry.addResourceHandler("/webjars/**")
-                .addResourceLocations("classpath:/META-INF/resources/webjars/")
-        super.addResourceHandlers(registry);
-
-    }
-}
 
