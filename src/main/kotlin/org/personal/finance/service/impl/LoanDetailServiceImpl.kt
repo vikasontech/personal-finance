@@ -1,8 +1,8 @@
-package org.personal.finance.personalFinance.service.impl
+package org.personal.finance.service.impl
 
-import org.personal.finance.personalFinance.docs.LoanDetail
-import org.personal.finance.personalFinance.docs.LoanDetailRepo
-import org.personal.finance.personalFinance.service.LoanDetailService
+import org.personal.finance.docs.LoanDetail
+import org.personal.finance.docs.LoanDetailRepo
+import org.personal.finance.service.LoanDetailService
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 

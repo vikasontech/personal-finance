@@ -1,4 +1,4 @@
-package org.personal.finance.PersonalFinance
+package org.personal.finance
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

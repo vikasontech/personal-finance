@@ -1,15 +1,14 @@
-package org.personal.finance.personalFinance.facade.impl
+package org.personal.finance.facade.impl
 
 import io.github.benas.randombeans.EnhancedRandomBuilder
 import org.junit.Test
-
 import org.junit.runner.RunWith
 import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.junit.MockitoJUnitRunner
-import org.personal.finance.personalFinance.docs.LoanDetail
-import org.personal.finance.personalFinance.service.LoanDetailService
+import org.personal.finance.docs.LoanDetail
+import org.personal.finance.service.LoanDetailService
 import reactor.core.publisher.Mono
 import reactor.test.StepVerifier
 

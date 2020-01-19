@@ -1,12 +1,9 @@
-package org.personal.finance.personalFinance.service.impl
+package org.personal.finance.service.impl
 
 import org.junit.Test
-
-import org.junit.Assert.*
 import org.junit.runner.RunWith
-import org.personal.finance.personalFinance.docs.LoanDetail
-import org.personal.finance.personalFinance.docs.LoanDetailRepo
-import org.personal.finance.personalFinance.service.LoanDetailService
+import org.personal.finance.docs.LoanDetail
+import org.personal.finance.service.LoanDetailService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ContextConfiguration

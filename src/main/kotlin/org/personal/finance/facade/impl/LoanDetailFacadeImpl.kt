@@ -1,8 +1,8 @@
-package org.personal.finance.personalFinance.facade.impl
+package org.personal.finance.facade.impl
 
-import org.personal.finance.personalFinance.docs.LoanDetail
-import org.personal.finance.personalFinance.facade.LoanDetailFacade
-import org.personal.finance.personalFinance.service.LoanDetailService
+import org.personal.finance.docs.LoanDetail
+import org.personal.finance.facade.LoanDetailFacade
+import org.personal.finance.service.LoanDetailService
 import org.springframework.stereotype.Component
 import reactor.core.publisher.Mono
 

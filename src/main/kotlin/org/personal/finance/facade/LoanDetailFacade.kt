@@ -1,6 +1,6 @@
-package org.personal.finance.personalFinance.facade
+package org.personal.finance.facade
 
-import org.personal.finance.personalFinance.docs.LoanDetail
+import org.personal.finance.docs.LoanDetail
 import reactor.core.publisher.Mono
 
 interface LoanDetailFacade {
