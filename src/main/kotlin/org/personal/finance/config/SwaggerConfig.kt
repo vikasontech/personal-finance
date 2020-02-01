@@ -17,8 +17,7 @@ class SwaggerConfig {
     fun api(): Docket =
             Docket(DocumentationType.SWAGGER_2)
                     .select()
-                    .apis(RequestHandlerSelectors.basePackage("org.personal.finance.personalFinance.web"))
-                    .paths(PathSelectors.any())
+                    .paths {it.startsWith("/api") }
                     .build()
 
 }
